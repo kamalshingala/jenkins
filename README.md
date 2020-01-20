@@ -1,4 +1,4 @@
-# Online Currency Converter Overview
+# FX Currency Converter Overview
 
 This application uses Westpac's FX Rates to Convert major foreign currencies to and from Australian dollars using https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json API
 
@@ -21,19 +21,20 @@ This application uses Westpac's FX Rates to Convert major foreign currencies to 
   * Click OK to host your website on your localhost IIS Server.
 * Access your website by navigating to `http//localhost:allocatedport` for e.g. `http://localhost:99/`
 
-## Setup requirements if running from Westpac's IIS Server where https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json API is allowing CORS Policy for origin
+## Setup requirements if running from Westpac's IIS Server
 
 * Deploy files from /wpFXCalculator to Westpac's IIS server
 * Assuming https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json API allows above Westpac server as part of the Access-Control-Allow-Origin list for CORS (Cross-Origin Resource Sharing) header
 * Uncomment "fetch(`https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json`)" line from /wpFXCalculator/function.js file and comment "fetch(`http://localhost:99//coversionRates.json`)" line
 
-## Setup requirements if running from host where https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json API is blocking CORS Policy for origin
+## Setup requirements if running from your machine's IIS Server
 
 * Deploy files from /wpFXCalculator to your IIS server
 * Assuming https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json API does not allows your server as part of the Access-Control-Allow-Origin list for CORS (Cross-Origin Resource Sharing) header
 * Uncomment "fetch(`http://localhost:99//coversionRates.json`)" line from /wpFXCalculator/function.js file and comment "fetch(`https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json`)" line
 
-##Getting Started
+## Getting Started
+
 * The URL to get the fx data is ``https://www.westpac.com.au/bin/getJsonRates.wbc.fx.json``.
 * For other platforms the use of frameworks, libraries, and open-source code is allowed – but please reference their use in comments in the code. Please use package management for open source dependencies where suitable.
 
